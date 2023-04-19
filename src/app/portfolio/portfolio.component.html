@@ -1,0 +1,541 @@
+<!-- header - developer home -->
+<!-- Start Header -->
+<header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
+  <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
+    <!-- Start Header Left -->
+    <div class="col-lg-2 col-6">
+      <div class="header-left">
+        <div class="logo">
+          <a href="index.html">
+            CV
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End Header Left -->
+    <!-- Start Header Center -->
+    <div class="col-lg-10 col-6">
+      <div class="header-center">
+        <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block onepagenav">
+          <!-- Start Mainmanu Nav -->
+          <ul class="primary-menu nav nav-pills">
+            <li class="nav-item current"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
+            <li class="nav-item"><a class="nav-link smoth-animation" href="#footer">Footer</a></li>
+          </ul>
+          <!-- End Mainmanu Nav -->
+        </nav>
+        <!-- Start Header Right  -->
+        <div class="header-right">
+          <div class="hamberger-menu d-block d-xl-none">
+            <i id="menuBtn" class="feather-menu humberger-menu"></i>
+          </div>
+
+          <div class="close-menu d-block">
+                            <span class="closeTrigger">
+                                <i data-feather="x"></i>
+                            </span>
+          </div>
+        </div>
+        <!-- End Header Right  -->
+
+      </div>
+    </div>
+    <!-- End Header Center -->
+  </div>
+</header>
+<!-- End Header Area -->
+
+<!-- Start Popup Mobile Menu  -->
+<div class="popup-mobile-menu">
+  <div class="inner">
+    <div class="menu-top">
+      <div class="menu-header">
+        <a class="logo" href="index.html">
+          CV
+          <!--                        <img src="assets/images/logo/logo.png" alt="Personal Portfolio">-->
+        </a>
+        <div class="close-button">
+          <button class="close-menu-activation close"><i data-feather="x"></i></button>
+        </div>
+      </div>
+      <p class="discription">Lorem ipsum dolor sit amet consect adipisicing elit repellendus.
+      </p>
+    </div>
+    <div class="content">
+      <ul class="primary-menu nav nav-pills onepagenav">
+        <li class="nav-item current"><a class="nav-link smoth-animation" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
+        <li class="nav-item"><a class="nav-link smoth-animation" href="#footer">Footer</a></li>
+      </ul>
+      <!-- social sharea area -->
+      <div class="social-share-style-1 mt--40">
+        <span class="title">find with me</span>
+        <ul class="social-share d-flex liststyle">
+          <li class="facebook"><a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="feather feather-facebook">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          </li>
+          <li class="instagram"><a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="feather feather-instagram">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          </li>
+          <li class="linkedin"><a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="feather feather-linkedin">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          </li>
+        </ul>
+      </div>
+      <!-- end -->
+    </div>
+  </div>
+</div>
+<!-- End Popup Mobile Menu  -->
+
+<main class="main-page-wrapper">
+
+  <!-- Start Slider Area -->
+  <div id="home" class="rn-slide-area">
+    <div class="slide slider-style-3">
+      <div class="container">
+        <div class="row slider-wrapper">
+          <div class="order-2 order-xl-1 col-lg-12 col-xl-5 mt_lg--50 mt_md--50 mt_sm--50">
+            <div class="slider-info">
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-12">
+                  <div class="user-info-top">
+                    <div class="user-info-header">
+                      <div class="user">
+                        <i data-feather="user"></i>
+                      </div>
+                      <h2 class="title">
+                        Hi, I’m <span>{{total_data[0].username}}</span>
+                      </h2>
+                      <p class="disc">{{total_data[0].about_me | titlecase}}
+                      </p>
+                    </div>
+                    <div class="user-info-footer">
+                      <div class="info">
+                        <i data-feather="file"></i>
+                        <span *ngFor="let role of total_data[0].positions">
+                                                      {{role}}</span>
+                      </div>
+                      <div class="info">
+                        <i data-feather="mail"></i>
+                        <span>{{total_data.email}}</span>
+                      </div>
+                      <div class="info">
+                        <i data-feather="map-pin"></i>
+                        <span>{{total_data[0].address|titlecase}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-12 col-lg-12 col-12">
+                  <div class="user-info-bottom">
+                    <span>Download my curriculum vitae: </span>
+                    <div class="button-wrapper d-flex">
+                      <a class="rn-btn mr--30" (click)="getDownloadResume()" download="MohanSunki.pdf"><span>DOWNLOAD CV</span></a>
+                      <a class="rn-btn" data-bs-toggle="modal" data-bs-target="#Contact" ><span>CONTACT ME</span></a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 order-xl-2 col-lg-12 col-xl-7">
+            <div class="background-image-area">
+              <div class="thumbnail-image">
+                <img src="{{total_data[0].image}}" [style.width.px]="logoWidth" [style.height.px]="logoHeight"
+                     [style.padding-top.px]="padding" alt="Personal Portfolio">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Slider Area -->
+
+
+  <!-- Start Resume Area -->
+  <div class="rn-resume-area rn-section-gap section-separator" id="resume">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+               class="section-title text-center">
+            <span class="subtitle">{{total_data[0].total_experience_durations}}</span>
+            <h2 class="title">Resume</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row mt--45">
+        <div class="col-lg-12">
+          <ul data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+              class="rn-nav-list nav nav-tabs" id="myTabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="education-tab" data-bs-toggle="tab" href="#education" role="tab"
+                 aria-controls="education" aria-selected="true">education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " id="professional-tab" data-bs-toggle="tab" href="#professional" role="tab"
+                 aria-controls="professional" aria-selected="false">professional
+                Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="experience-tab" data-bs-toggle="tab" href="#experience" role="tab"
+                 aria-controls="experience" aria-selected="false">experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="projects-tab" data-bs-toggle="tab" href="#projects" role="tab"
+                 aria-controls="projects" aria-selected="false">Projects</a>
+            </li>
+          </ul>
+
+          <!-- Start Tab Content Wrapper  -->
+          <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
+               class="rn-nav-content tab-content" id="myTabContents">
+
+            <!-- Start Single Tab  -->
+            <div class="tab-pane show active fade single-tab-area" id="education" role="tabpanel"
+                 aria-labelledby="education-tab">
+              <div class="personal-experience-inner mt--40">
+                <div class="row">
+                  <!-- Start Skill List Area  -->
+                  <div class="col-lg-6 col-md-12 col-12">
+                    <div class="content">
+                      <span class="subtitle">{{total_data[0].total_education}}</span>
+
+                      <h4 class="maintitle">Education Quality</h4>
+                      <div class="experience-list">
+
+                        <!-- Start Single List  -->
+                        <div class="resume-single-list" *ngFor="let edu of total_data[0].education">
+
+                          <div class="inner">
+                            <div class="heading">
+                              <div class="title">
+                                <h4>{{edu.degree |titlecase }} </h4>
+                                <span>{{edu.institution | titlecase}} in {{edu.duration}} </span>
+                                <span class="subtitle"></span>
+                              </div>
+                              <div class="date-of-time">
+                                <span>{{edu.percentage}}</span>
+                              </div>
+                            </div>
+                            <p class="description">{{edu.description|lowercase}}</p>
+                          </div>
+                        </div>
+                        <!-- End Single List  -->
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Skill List Area  -->
+
+                </div>
+              </div>
+            </div>
+            <!-- End Single Tab  -->
+
+            <!-- Start Single Tab  -->
+            <div class="tab-pane fade " id="professional" role="tabpanel" aria-labelledby="professional-tab">
+              <div class="personal-experience-inner mt--40">
+                <div class="row row--40">
+
+                  <!-- Start Single Progressbar  -->
+                  <div class="col-lg-6 col-md-6 col-12" *ngFor="let catgeory of userSkills">
+                    <div class="progress-wrapper">
+                      <div class="content">
+                        <span class="subtitle">Features</span>
+                        <h4 class="maintitle">{{catgeory.category_name}} Skill</h4>
+                        <!-- Start Single Progress Charts -->
+                        <div class="progress-charts" *ngFor="let skill of catgeory.skills">
+                          <h6 class="heading heading-h6">{{skill.skill_name}}</h6>
+
+                              <div class="progress">
+                                  <div class="progress-bar wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay=".4s"
+                                       [style.width.%]="(skill.skill_level / 10) * 100"
+                                       [attr.aria-valuenow]="skill.skill_level"
+                                       aria-valuemin="0" aria-valuemax="10">
+                                       <span class="percent-label">{{skill.skill_level}}</span>
+                                  </div>
+                              </div>
+<!--                           <div class="progress">-->
+<!--                              <div class="progress-bar wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay=".4s"-->
+<!--                                   [style.width.%]="skill.skill_level"-->
+<!--                                   [attr.aria-valuenow]="skill.skill_level"-->
+<!--                                   aria-valuemin="0" aria-valuemax="100">-->
+<!--                                   <span class="percent-label">{{skill.skill_level}}%</span>-->
+<!--                              </div>-->
+<!--                          </div>-->
+                        </div>
+                        <!-- End Single Progress Charts -->
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Progressbar  -->
+
+                </div>
+              </div>
+            </div>
+            <!-- End Single Tab  -->
+
+            <!-- Start Single Tab  -->
+            <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
+              <div class="personal-experience-inner mt--40">
+                <div class="row">
+
+                  <!-- Start Skill List Area 2nd  -->
+                  <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
+                    <div class="content">
+                      <span class="subtitle" *ngIf="total_data[0].total_experience && total_data[0].total_experience_count">
+                        {{total_data[0].total_experience}} - ({{total_data[0].total_experience_durations}})
+                      </span>
+
+                      <h4 class="maintitle">Job Experience</h4>
+                      <div class="experience-list">
+
+                        <!-- Start Single List  -->
+                        <div class="resume-single-list" *ngFor="let exp of experience">
+                          <div class="inner">
+                            <div class="heading">
+                              <div class="title">
+                                <h4>{{exp.company|uppercase}}</h4>
+                                <span>{{exp.position}} ({{exp.duration}})</span>
+                              </div>
+                            </div>
+                            <p class="description">{{exp.description|titlecase}}</p>
+                          </div>
+                        </div>
+                        <!-- End Single List  -->
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Skill List Area  -->
+                </div>
+              </div>
+            </div>
+            <!-- End Single Tab  -->
+
+            <!-- Start Single Tab  -->
+            <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+              <div class="personal-experience-inner mt--40">
+                <div class="row">
+                  <!-- Start Skill List Area 2nd  -->
+                  <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
+                    <div class="content">
+                      <h4 class="maintitle">Projects</h4>
+                      <div class="experience-list">
+
+                        <!-- Start Single List  -->
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="resume-single-list" *ngFor="let project of projects">
+                          <div class="inner">
+                            <div class="heading">
+                              <div class="title" data-bs-toggle="modal" data-bs-target="#ProjectsPopup">
+                                <h4><a href="javascript:void(0)" (click)="getProduct(project.id)">{{project.title|titlecase}} </a></h4>
+                                <span>{{project.description|slice:0:60}}</span>
+                              </div>
+                            </div>
+                            <p class="description">{{project.features|lowercase }}</p>
+                          </div>
+                        </div>
+                        <!-- End Single List  -->
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Skill List Area  -->
+
+                </div>
+              </div>
+            </div>
+            <!-- End Single Tab  -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Resume Area -->
+
+
+  <!-- Modal Portfolio Body area Start -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true" *ngIf="project_data">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i data-feather="x"></i></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center">
+
+            <div class="col-lg-6">
+              <div class="modal-header">
+              <h5 >{{project_data.title|titlecase}}</h5>
+              </div>
+              <div class="portfolio-popup-thumbnail">
+
+                <div class="image">
+                  <img class="w-100" src="{{project_data.image}}" alt="slide">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="text-content">
+                <h3>
+                  <span>{{project_data.description}}</span>
+                </h3>
+                <p class="mb--30">{{project_data.features}}</p>
+                <p>User Role:{{project_data.user_role}}</p>
+                <div class="button-group mt--20">
+                  <a href="{{project_data.link}}" class="rn-btn">
+                    <span>VIEW PROJECT</span>
+                    <i data-feather="chevron-right"></i>
+                  </a>
+                </div>
+
+              </div>
+              <!-- End of .text-content -->
+            </div>
+          </div>
+          <!-- End of .row Body-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal Portfolio area -->
+
+  <!-- Modal Blog Body area Start -->
+  <div class="modal fade" id="Contact" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-news" role="document">
+      <div class="modal-content">
+
+
+        <div class="modal-header">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i data-feather="x"></i></span>
+          </button>
+        </div>
+
+        <!-- End of .modal-header -->
+
+        <div class="modal-body">
+
+          <!-- Comment Section Area Start -->
+          <div class="comment-inner">
+            <h3 class="title mb--40 mt--50">Contact</h3>
+            <form action="#" #contactForm="ngForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-lg-6 col-md-12 col-12">
+                  <div class="rnform-group"><input type="text" [(ngModel)]="contact.name" name="name" placeholder="Name" required>
+                  </div>
+                  <div class="rnform-group"><input type="email" [(ngModel)]="contact.email" name="email" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12">
+                  <div class="rnform-group">
+                    <textarea placeholder="Comment" [(ngModel)]="contact.message" name="message" required></textarea>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <button class="rn-btn" type="submit"><span>SEND NOW</span></button>
+                </div>
+              </div>
+            </form>
+                  <!-- Display success message -->
+                <div *ngIf="showSuccessMessage" class="alert alert-success">
+                  {{ successMessage }}
+                </div>
+
+                <!-- Display error message -->
+                <div *ngIf="showErrorMessage" class="alert alert-danger">
+                  {{ errorMessage }}
+                </div>
+          </div>
+          <!-- Comment Section End -->
+        </div>
+        <!-- End of .modal-body -->
+      </div>
+    </div>
+  </div>
+  <!-- End Modal Blog area -->
+  <!-- Modal Blog Body area Start -->
+  <div class="modal fade" id="ProjectsPopup" tabindex="-1" role="dialog" aria-hidden="true" *ngIf="project_data">
+    <div class="modal-dialog modal-dialog-centered modal-news" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i data-feather="x"></i></span>
+          </button>
+        </div>
+
+        <!-- End of .modal-header -->
+
+        <div class="modal-body">
+          <img src="{{project_data.image}}" alt="news modal" class="img-fluid modal-feat-img">
+          <div class="news-details">
+<!--            <span class="date">2 May, 2021</span>-->
+            <h2 class="title">{{project_data.title|titlecase}}</h2>
+            <p>{{project_data.description}}</p>
+
+            <p class="mb--30">{{project_data.features}}</p>
+                <p>User Role:{{project_data.user_role}}</p>
+          </div>
+            <div class="button-group mt--20">
+                  <a href="{{project_data.link}}" class="rn-btn">
+                    <span>VIEW PROJECT</span>
+                    <i data-feather="chevron-right"></i>
+                  </a>
+                </div>
+
+        </div>
+        <!-- End of .modal-body -->
+      </div>
+    </div>
+  </div>
+  <!-- End Modal Blog area -->
+
+  <!-- Start Right Demo  -->
+  <div class="rn-right-demo">
+    <button class="demo-button">
+      <span class="text">Mohan Sunki</span>
+    </button>
+  </div>
+  <!-- End Right Demo  -->
+
+</main>
+
+<!-- Rn footer area Start -->
+<div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop ">
+
+  <div class="copyright text-center ptb--40 section-separator">
+    <p class="description">© 2023. All rights reserved by <a target="_blank" href="">Sunki Mohan</a></p>
+  </div>
+</div>
